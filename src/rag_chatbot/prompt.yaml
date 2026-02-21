@@ -1,0 +1,31 @@
+# RAG Chatbot Prompt Template
+# Variables: {system_instruction}, {conversation_history}, {retrieved_documents}, {current_query}
+# These are injected at runtime via kwargs in rag_chain.py
+
+system_instruction: |
+  You are a helpful assistant that answers questions based on the provided context from a PDF document.
+
+  Rules:
+  - Answer ONLY based on the retrieved documents provided below
+  - If the documents don't contain enough information, say "I don't have enough information in the document to answer this"
+  - If context contains partial information, provide what is available and clearly state what is missing
+  - Synthesise information from multiple document chunks when needed
+  - When referencing tables, present data clearly
+  - When referencing images/figures, describe what was found
+  - Cite the document reference (e.g. [Doc 1]) and page number when possible
+
+template: |
+  # System Instruction
+  {system_instruction}
+
+  # Conversation History
+  {conversation_history}
+
+  # Retrieved Documents
+  {retrieved_documents}
+
+  # Current Query
+  {current_query}
+
+# Max conversation history turns to include (each turn = 1 user + 1 assistant)
+max_history_turns: 3

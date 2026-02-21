@@ -1,0 +1,152 @@
+[
+    {
+        "question": "What is agentic AI?",
+        "expected_chunk_type": "text",
+        "expected_page": 3,
+        "ground_truth": "Agentic AI systems are systems that can plan across multiple steps to achieve specified objectives, using AI agents. Agents usually possess some degree of independent planning and action taking over multiple steps to achieve a user-defined goal."
+    },
+    {
+        "question": "What are the six core components of an AI agent?",
+        "expected_chunk_type": "text",
+        "expected_page": 3,
+        "ground_truth": "The six core components are: (1) Model – the LLM/SLM/MLLM serving as the brain, (2) Instructions – natural language commands defining role and constraints, (3) Memory – stored information accessible to the LLM, (4) Planning and reasoning – ability to output steps needed for a task, (5) Tools – enable the agent to take actions and interact with systems, (6) Protocols – standardised communication such as MCP and A2A."
+    },
+    {
+        "question": "What are the three common design patterns for multi-agent systems?",
+        "expected_chunk_type": "text",
+        "expected_page": 4,
+        "ground_truth": "The three common design patterns are: (1) Sequential – agents work one after another in a linear workflow, (2) Supervisor – one supervising agent coordinates specialised agents, (3) Swarm – agents work at the same time, handing off to another agent when needed."
+    },
+    {
+        "question": "What is the difference between action-space and autonomy in agent design?",
+        "expected_chunk_type": "text",
+        "expected_page": 4,
+        "ground_truth": "Action-space (or authority/capabilities) is the range of actions the agent is permitted to take, determined by tools and transactions it can execute. Autonomy (or decision-making) is the degree to which an agent can decide when and how to act towards a goal, determined by its instructions and level of human involvement."
+    },
+    {
+        "question": "What is a computer use agent?",
+        "expected_chunk_type": "text",
+        "expected_page": 5,
+        "ground_truth": "A computer use agent is an emerging modality of agentic AI whose primary tool is access to a computer and browser. It can take any action that a human can take with a computer and browser without relying on specifically defined tools and APIs, significantly increasing what the agent can access and do."
+    },
+    {
+        "question": "What are the four levels of human involvement when interacting with an agent?",
+        "expected_chunk_type": "text",
+        "expected_page": 5,
+        "ground_truth": "The four levels are: (1) Agent proposes, human operates – human directs and approves every step, (2) Agent and human collaborate – agent requires human approval at significant steps, (3) Agent operates, human approves – agent requires approval only at critical steps or failures, (4) Agent operates, human observes – agent does not require approval, actions may be audited after the fact."
+    },
+    {
+        "question": "How can risks arise at the system level when multiple agents interact?",
+        "expected_chunk_type": "text",
+        "expected_page": 6,
+        "ground_truth": "Risks at the system level include: (1) Cascading effect – a mistake by one agent escalates as outputs pass to other agents, e.g. a hallucinated inventory figure causing downstream agents to reorder incorrect stock, and (2) Unpredictable outcomes – agents working together may compete or coordinate in unintended ways, e.g. over or under-prioritising resources leading to unexpected bottlenecks."
+    },
+    {
+        "question": "What are the five types of risk from agentic AI?",
+        "expected_chunk_type": "text",
+        "expected_page": 7,
+        "ground_truth": "The five types of risk are: (1) Erroneous actions – incorrect actions like wrong appointments or flawed code, (2) Unauthorised actions – actions taken outside permitted scope, (3) Biased or unfair actions – actions leading to unfair outcomes across demographics, (4) Data breaches – exposure or manipulation of sensitive data, (5) Disruption to connected systems – causing disruption when compromised or malfunctioning."
+    },
+    {
+        "question": "What are the four dimensions of the Model AI Governance Framework for Agentic AI?",
+        "expected_chunk_type": "text",
+        "expected_page": 8,
+        "ground_truth": "The four dimensions are: (1) Assess and bound the risks upfront, (2) Make humans meaningfully accountable, (3) Implement technical controls and processes, (4) Enable end-user responsibility."
+    },
+    {
+        "question": "What factors affect the impact level of risk in an agentic use case?",
+        "expected_chunk_type": "table",
+        "expected_page": 9,
+        "ground_truth": "Factors affecting impact include: (1) Domain and use case – level of tolerance of error, (2) Agent's access to sensitive data – whether agent can access personal or confidential data, (3) Agent's access to external systems – whether agent can access external systems, (4) Scope of agent's actions – whether agent can read or write to systems, (5) Reversibility of agent's actions – whether modifications can be easily reversed."
+    },
+    {
+        "question": "What factors affect the likelihood of risk in an agentic use case?",
+        "expected_chunk_type": "table",
+        "expected_page": 10,
+        "ground_truth": "Factors affecting likelihood include: (1) Agent's level of autonomy – whether agent can define entire workflow or must follow procedure, with higher autonomy increasing unpredictability, (2) Task complexity – number of steps and level of analysis required, with higher complexity increasing likelihood of error, (3) Agent's access to external systems – level of exposure to external systems and who maintains them, with higher exposure increasing vulnerability to attacks."
+    },
+    {
+        "question": "What is taint tracing in the context of agentic AI threat modelling?",
+        "expected_chunk_type": "text",
+        "expected_page": 10,
+        "ground_truth": "Taint tracing is a method used to map out all the workflows and interactions in agentic systems to track how untrusted data can move through the system. It is particularly useful because agentic systems, especially multi-agent systems, can become very complex."
+    },
+    {
+        "question": "What limits should organisations define for their agents?",
+        "expected_chunk_type": "text",
+        "expected_page": 11,
+        "ground_truth": "Organisations should define limits on: (1) Agent's access to tools and systems – give only minimum tools and data access needed, (2) Agent's autonomy – define SOPs for agentic workflows rather than giving freedom to define every step, (3) Agent's area of impact – design mechanisms to take agents offline and limit scope of impact, including running agents in self-contained environments."
+    },
+    {
+        "question": "What are the best practices for agent identity management?",
+        "expected_chunk_type": "text",
+        "expected_page": 12,
+        "ground_truth": "Best practices include: (1) Identification – agent should have a unique identity tied to a supervising agent, human user, or organisational department, with different capacities recorded, (2) Authorisation – agent can have pre-defined permissions based on role or dynamically set by human user, with the rule that human users should not set agent permissions greater than their own authorisation."
+    },
+    {
+        "question": "What is automation bias and why is it a concern for agentic AI?",
+        "expected_chunk_type": "text",
+        "expected_page": 13,
+        "ground_truth": "Automation bias is the tendency to over-trust an automated system, especially when it has performed reliably in the past. It becomes a bigger concern as humans supervise increasingly capable agents, making it harder to maintain effective human oversight."
+    },
+    {
+        "question": "What are the key responsibilities of key decision makers in an organisation deploying agentic AI?",
+        "expected_chunk_type": "table",
+        "expected_page": 14,
+        "ground_truth": "Key decision makers (board members, C-suite executives, managing directors, department leaders) are responsible for: setting high-level goals for use of agents, defining permitted operational use cases including limits on agent's data access, and setting the overall governance approach including risk management frameworks and escalation processes."
+    },
+    {
+        "question": "What checkpoints should require human approval in an agentic workflow?",
+        "expected_chunk_type": "text",
+        "expected_page": 16,
+        "ground_truth": "Checkpoints requiring human approval include: (1) High-stakes actions and decisions such as editing sensitive data or final decisions in high-risk domains, (2) Irreversible actions such as permanently deleting data, sending communications, or making payments, (3) Outlier or atypical behaviour such as accessing a system outside work scope, (4) User-defined boundaries such as requiring approval for purchases above a certain amount."
+    },
+    {
+        "question": "What technical controls should be implemented for agent planning?",
+        "expected_chunk_type": "table",
+        "expected_page": 18,
+        "ground_truth": "For planning: prompt agent to reflect on whether its plan adheres to user instructions, prompt the agent to summarise its understanding and request clarification before proceeding, and log the agent's plan and reasoning for the user to evaluate and verify."
+    },
+    {
+        "question": "What technical controls should be implemented for agent tools?",
+        "expected_chunk_type": "table",
+        "expected_page": 18,
+        "ground_truth": "For tools: configure tools to require strict input formats, apply the principle of least privilege to limit tools available to each agent through robust authentication and authorisation, do not grant agent write access to tables in sensitive databases unless strictly required, and configure agent to let user take over control when keying in sensitive data."
+    },
+    {
+        "question": "What new dimensions should agents be tested for before deployment?",
+        "expected_chunk_type": "text",
+        "expected_page": 19,
+        "ground_truth": "Agents should be tested for: (1) Overall task execution – whether agent can complete task accurately, (2) Policy compliance – whether agent follows defined SOPs and routes for human approval, (3) Tool calling – whether agent calls the right tools with right permissions, inputs, and order, (4) Robustness – response to errors and edge cases."
+    },
+    {
+        "question": "How should organisations approach gradual deployment of agents?",
+        "expected_chunk_type": "text",
+        "expected_page": 20,
+        "ground_truth": "Rollouts can be controlled based on: (1) Users of agents – rolling out to trained or experienced users first, (2) Tools and protocols available – restricting agents to more secure whitelisted MCP servers first, (3) Systems exposed to agent – using agents in lower-risk internal systems first."
+    },
+    {
+        "question": "What are the three approaches for defining alert thresholds when monitoring agents?",
+        "expected_chunk_type": "text",
+        "expected_page": 21,
+        "ground_truth": "The three approaches are: (1) Programmatic threshold-based – define alerts when agents trigger thresholds like unauthorised access or too many repeated tool calls, (2) Outlier/anomaly detection – use data science or deep learning techniques to identify anomalous behaviour, (3) Agents monitoring other agents – design agents to monitor other agents in real-time, flagging anomalies or inconsistencies."
+    },
+    {
+        "question": "What are the two main archetypes of end-users of agentic AI?",
+        "expected_chunk_type": "text",
+        "expected_page": 22,
+        "ground_truth": "The two archetypes are: (1) Users who interact with agents, such as customer service or HR agents, mostly external-facing – focus should be on transparency, (2) Users who integrate agents into their work processes, such as coding assistants and enterprise workflows, mostly internal-facing – should layer on education and training."
+    },
+    {
+        "question": "What information should be provided to users who interact with agents?",
+        "expected_chunk_type": "text",
+        "expected_page": 23,
+        "ground_truth": "Information includes: user's responsibilities such as double-checking agent output, declaration that users are interacting with agents, the agent's range of authorised actions and decisions, clarity on how user data is collected, stored and used, and human contact points for escalation if agents malfunction."
+    },
+    {
+        "question": "What is the concern about tradecraft when deploying agents?",
+        "expected_chunk_type": "text",
+        "expected_page": 24,
+        "ground_truth": "As agents take over entry level tasks which typically serve as training grounds for new staff, this could lead to loss of basic operational knowledge for users. Organisations should identify core capabilities of each job and provide sufficient training and work exposure so that users retain foundational skills."
+    }
+]
