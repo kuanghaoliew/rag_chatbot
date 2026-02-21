@@ -31,7 +31,7 @@ Thumbs.db
 
 # Parsed output
 parsed_output/
-*.md
+mgf-for-agentic-ai.md
 
 # deps
 uv.lock
